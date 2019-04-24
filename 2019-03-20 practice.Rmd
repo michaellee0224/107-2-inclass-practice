@@ -256,6 +256,73 @@ extract2 <- plasticContainer[[c("greenBox")]]
 extract2[[1]]
 ```
 
+```{r}
+a <- matrix(c(1:6), nrow=3, ncol=2)
+a
+```
+
+```{r}
+MAT2 <- matrix(c("a","b","c","d"),2,2)
+MAT2
+class(MAT2)
+typeof(MAT2)
+MAT2[[2]]
+MAT2[c(T,F,F,T)]
+```
+
+```{r}
+StuList <- list(
+  學號=c(172,214,322,425,517),
+  姓名=c("小明","大雄","胖虎","小新","大白"),
+  成績=c(80,60,90,70,50)
+  )
+StuList 
+StuList[[2]][3]
+```
+```{r}
+chosenLETTERS <- LETTERS[1:8]
+m <- matrix(chosenLETTERS,2,4)
+m
+tolower(m)
+```
+
+```{r}
+LETTERS
+chosenLETTERS <- LETTERS[1:8]
+m <- matrix(chosenLETTERS,2,4)
+m
+tolower(m) # 轉成小寫
+m
+toupper(m) # 轉成大寫
+m
+```
+```{r}
+chosenLETTERS <- LETTERS[1:15]
+chosenLETTERS
+chosenletters <- letters[1:15]
+chosenletters
+```
+```{r}
+matObj1 <-matrix(chosenLETTERS,5,3)
+matObj1 
+matObj11 <-matrix(chosenLETTERS,3,5)
+matObj11
+```
+```{r}
+matObj12 <- matObj1[c(T,F,F,F,T),c(F,T,T)]
+matObj12
+```
+
+```{r}
+library(readr)
+classSurvey <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/classSurvey.csv")
+```
+```{r}
+dim(classSurvey)
+classSurvey[c(1:60),c(4,5)]
+classSurvey[,c(4,5)]
+```
+
 
 
 
