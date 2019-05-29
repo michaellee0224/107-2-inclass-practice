@@ -470,6 +470,64 @@ date_convert_twYM <- function(twDates,dd="01"){
   yyyymmdd
 }
 ```
+```{r}
+textbookURL<-function(){
+browseURL("https://bookdown.org/tpemartin/ntpu-programming-for-data-science/function-and-conditional-execution.html#section-8.1")}
+textbookURL()
+```
+
+```{r}
+demand_supply_fun <- function(P,a,b,c,d){
+  Qs <- a+b*P
+  Qd <- c-d*P
+  es <- Qs -Qd
+  return(list(
+    供給量=Qs,
+    需求量=Qd,
+    超額供給量=es
+  )
+  )
+}
+```
+```{r}
+demand_supply_fun(1,2,3,4,5)
+```
+```{r}
+gpa_fun <- function(studentID){
+
+  if(studentID %in% transcriptDataFinal$學號){
+    transcriptDataFinal$學號==studentID -> logiChosenStudent
+
+    subSample <- transcriptDataFinal[logiChosenStudent,]
+
+    sum(subSample$學期成績*subSample$學分數)/
+    sum(subSample$學分數) -> GPA
+    return(GPA)
+  }else{
+    message("查無此學號")
+
+ }
+}
+
+gpa_fun("92aS67fee") # 顯示82.85276
+gpa_fun("aa829838s") # 查無此學號
+
+```
+```{r}
+fizzbuzz <- function(number){
+  if(number %% 15== 0){
+    return("fizzbuzz")}
+    else if(number%% 3 ==0){
+      return("fizz")
+    }else if (number%% 5 == 0){
+      return("buzz")
+    }else {
+      return(number)
+    }
+}
+fizzbuzz(27)
+fizzbuzz(36)
+```
 
 
 
